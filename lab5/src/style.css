@@ -1,0 +1,146 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.angry-grid {
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+    height: 100%;
+
+}
+
+#item-0 {
+
+    background-image: url(https://igrostation.ru/upload/medialibrary/086/0861e904f8e87c9983f2b73f3d4b4aca.jpg);
+    background-size: cover;
+
+    width: 500px; /* Ширина области */
+    height: 400px; /* Высота области */
+
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 2;
+    grid-column-end: 2;
+
+    border-radius: 30px;
+
+}
+#item-1 {
+
+    width: 150px; /* Ширина области */
+    height: 400px; /* Высота области */
+
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    grid-row-end: 2;
+    grid-column-end: 3;
+
+    border-radius: 30px;
+
+}
+#item-2 {
+
+    background-image: url(https://meups.com.br/wp-content/uploads/2021/04/Os-10-melhores-Jogos-do-PlayStation-3.jpg);
+    background-size: cover;
+
+    width: 500px; /* Ширина области */
+    height: 400px; /* Высота области */
+
+    grid-row-start: 1;
+    grid-column-start: 3;
+
+    grid-row-end: 2;
+    grid-column-end: 4;
+
+    border-radius: 30px;
+
+}
+#item-3 {
+
+    width: 150px; /* Ширина области */
+    height: 400px; /* Высота области */
+
+    grid-row-start: 1;
+    grid-column-start: 4;
+
+    grid-row-end: 2;
+    grid-column-end: 5;
+
+    border-radius: 30px;
+
+}
+#item-4 {
+
+    background-image: url(https://consolefix.ru/wp-content/uploads/2021/04/sony-playstation-4.jpg);
+    background-size: cover;
+
+    width: 500px; /* Ширина области */
+    height: 400px; /* Высота области */
+
+    grid-row-start: 2;
+    grid-column-start: 1;
+
+    grid-row-end: 3;
+    grid-column-end: 2;
+
+    border-radius: 30px;
+
+}
+#item-5 {
+
+    width: 150px; /* Ширина области */
+    height: 400px; /* Высота области */
+
+    grid-row-start: 2;
+    grid-column-start: 2;
+
+    grid-row-end: 3;
+    grid-column-end: 3;
+
+    border-radius: 30px;
+
+}
+#item-6 {
+
+    background-image: url(https://www.presse-citron.net/app/uploads/2020/09/evenement-playstation-5-ps5.jpg);
+    background-size: cover;
+
+    width: 500px; /* Ширина области */
+    height: 400px; /* Высота области */
+
+    grid-row-start: 2;
+    grid-column-start: 3;
+
+    grid-row-end: 3;
+    grid-column-end: 4;
+
+    border-radius: 30px;
+
+}
+#item-7 {
+
+    width: 150px; /* Ширина области */
+    height: 400px; /* Высота области */
+
+    grid-row-start: 2;
+    grid-column-start: 4;
+
+    grid-row-end: 3;
+    grid-column-end: 5;
+
+    border-radius: 30px;
+
+}
+
+

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<h1 class="master2">Лабораторная работа 4</h1>
+<h3>№1.	Скопируйте код объекта и проанализируйте его работу:
+    let user = {
+    name: "Джон",
+    age: 30
+    };
+    Добавим метод для объекта
+    user.sayHi = function() {
+    alert("Привет!");
+    };
+
+    user.sayHi(); // Привет!
+</h3>
+<h5>Код выведет слово привет:</h5>
+<h5 class="otvet1"></h5>
+
+<h3>№2. Создайте объект – информация о покупателе (не менее 5 строк) и выведите три из них.</h3>
+<h5 class="otvet2"></h5>
+<h5 class="otvet2"></h5>
+<h5 class="otvet2"></h5>
+
+<h3>№3.	Создайте объекты пользователи, заказы и рестораны с соответствующими значениями. Организуйте вывод информации из объектов по условию.</h3>
+<h5 class="otvet3"></h5>
+<h5 class="otvet3"></h5>
+<h5 class="otvet3"></h5>
+<h5 class="otvet3"></h5>
+<h5 class="otvet3"></h5>
+
+<h3>№4. При помощи функции-конструктора и оператора "new" создайте функцию, выводящую имена вашей группы:</h3>
+<h5 class="otvet4"></h5>
+
+<h3>№5.	Используя конструктор, создайте объект – студент. Передайте конструктору параметры, определяющие, как создавать объект, и что в него записывать:</h3>
+<h5 class="otvet5"></h5>
+<script>
+    let user = {
+        name: "Джон",
+        age: 30
+    };
+    user.sayHi = function() {
+        var master = document.getElementsByClassName("otvet1");
+        master[0].innerHTML = 'Привет!';
+    };
+    user.sayHi(); // Привет!
+
+
+
+    const customerInfo = {
+        name: "Артём Петриков",
+        age: 19,
+        email: "213768@edu.fa.ru",
+        address: {
+            street: "Пушкина",
+            city: "Москва",
+            zip: "12345"
+        },
+        phone: "+79744216595"
+    };
+    var master = document.getElementsByClassName("otvet2");
+    master[0].innerHTML = 'Имя покупателя: ' + customerInfo.name;
+    master[1].innerHTML = 'Email покупателя: ' + customerInfo.email;
+    master[2].innerHTML = 'Город покупателя: ' + customerInfo.address.city;
+
+
+    const user1 = {
+        name: "Маша",
+        age: 20,
+        email: "masha@ya.ru",
+        address: {
+            street: "Пушкина",
+            city: "Москва",
+            zip: "12345"
+        },
+        phone: "+79774316492"
+    };
+    const user2 = {
+        name: "Макс",
+        age: 30,
+        email: "max@ya.ru",
+        address: {
+            street: "Пушкина",
+            city: "Москва",
+            zip: "67890"
+        },
+        phone: "+79274516492"
+    };
+
+    const order1 = {
+        id: 1,
+        date: "2023-05-11",
+        user: user1,
+        restaurant: {
+            name: "Пиццерия у Джона",
+            address: {
+                street: "Пушкина",
+                city: "Москва",
+                zip: "12345"
+            }
+        },
+        items: [
+            {
+                name: "Пицца четыре сыра",
+                price: 12.99,
+                quantity: 1
+            },
+            {
+                name: "Яблочный сок",
+                price: 4.99,
+                quantity: 2
+            }
+        ],
+        total: 22.97
+    };
+
+    const order2 = {
+        id: 2,
+        date: "2023-05-09",
+        user: user2,
+        restaurant: {
+            name: "Бургерная №1",
+            address: {
+                street: "Пушкина",
+                city: "Москва",
+                zip: "67890"
+            }
+        },
+        items: [
+            {
+                name: "Гамбургер",
+                price: 8.99,
+                quantity: 2
+            },
+            {
+                name: "Картошка фри",
+                price: 2.99,
+                quantity: 1
+            }
+        ],
+        total: 20.97
+    };
+    const restaurant1 = {
+        name: "Пиццерия у Джона",
+        address: {
+            street: "Пушкина",
+            city: "Москва",
+            zip: "12345"
+        },
+        phone: "+79772213541",
+        menu: [
+            {
+                name: "Пицца четыре сыра",
+                price: 12.99
+            },
+            {
+                name: "Пицца два сыра",
+                price: 10.99
+            },
+            {
+                name: "Яблочный сок",
+                price: 4.99
+            }
+        ]
+    };
+    const restaurant2 = {
+        name: "Бургерная №1",
+        address: {
+            street: "Пушкина",
+            city: "Москва",
+            zip: "12345"
+        },
+        phone: "+79272213591",
+        menu: [
+            {
+                name: "Гамбургер",
+                price: 8.99
+            },
+            {
+                name: "Чизбургер",
+                price: 7.99
+            },
+            {
+                name: "Картошка фри",
+                price: 2.99
+            }
+        ]
+    };
+    var master = document.getElementsByClassName("otvet3");
+    master[0].innerHTML = 'Заказ №' + order1.id + ' был сделан ' + order1.date + ' покупателем ' + order1.user.name + ' в ресторане ' + order1.restaurant.name;
+    master[1].innerHTML = 'Заказ №' + order2.id + ' был сделан ' + order2.date + ' покупателем ' + order2.user.name + ' в ресторане ' + order2.restaurant.name;
+    master[2].innerHTML = 'Ресторан ' + restaurant1.name + ' находится по адресу ' + restaurant1.address.street + ', ' + restaurant1.address.city + '.' + ' Телефон: ' + restaurant1.phone;
+    master[3].innerHTML = 'Ресторан ' + restaurant2.name + ' находится по адресу ' + restaurant2.address.street + ', ' + restaurant2.address.city + '.' + ' Телефон: ' + restaurant2.phone;
+
+
+    function Group(name) {
+        this.name = name;
+        this.printName = function() {
+            var master = document.getElementsByClassName("otvet4");
+            master[0].innerHTML = this.name;
+        }
+    }
+    var names = ["Артём","Дима","Айдар","Денис","Кирилл"]
+    const myGroup = new Group(names);
+    myGroup.printName();
+
+
+    function Student(name, age, group) {
+        this.name = name;
+        this.age = age;
+        this.group = group;
+        this.info = function() {
+            var master = document.getElementsByClassName("otvet5");
+            master[0].innerHTML = "Меня зовут: " + this.name + " мне " + this.age + " лет" + ". Я учусь в группе " + this.group;
+        };
+    }
+    let student = new Student("Артём",19,"ПИ21-4");
+    student.info();
+
+
+
+
+
+</script>
+</body>
+</html>
